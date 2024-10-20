@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Muhammad Parwaz</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script>
+        // Function to set the theme based on user preference
+        function setTheme(theme) {
+            document.body.classList.toggle('dark-mode', theme === 'dark');
+            localStorage.setItem('theme', theme); // Save preference to local storage
+        }
+    
+        // Load theme from local storage or set default
+        function loadTheme() {
+            const theme = localStorage.getItem('theme') || 'light'; // Default to light
+            setTheme(theme);
+        }
+    
+        // Toggle theme when button is clicked
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        }
+    
+        // Load theme on initial page load
+        window.onload = loadTheme;
+    
+        // Add event listener to the toggle button
+        document.getElementById('modeToggle').addEventListener('click', toggleTheme);
+    </script>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="cheatsheet.html">Html Cheat Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="resume">
+            <h1>Resume</h1>
+
+            <!-- Personal Details -->
+            <div class="resume-section">
+                <h2>Personal Details</h2>
+                <p><strong>Name:</strong> Muhammad Parwaz</p>
+                <p><strong>Email:</strong> <a href="mailto:mparwaz080@gmail.com">mparwaz080@gmail.com</a></p>
+                <p><strong>Phone:</strong> +1 (587) 429-0125</p>
+                <p><strong>Location:</strong> Calgary, Alberta, Canada</p>
+            </div>
+
+            <!-- Education -->
+            <div class="resume-section">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <strong>Bow Valley College</strong> - Calgary, Alberta (2022 - Present)
+                        <br>Diploma in Software Development
+                    </li>
+                    <li>
+                        <strong>High School</strong> - Calgary, Alberta (2018 - 2021)
+                        <br>High School Diploma
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="resume-section">
+                <h2>Work Experience</h2>
+                <ul>
+                    <li>
+                        <strong>Intern Web Developer</strong> - XYZ Company (June 2024 - August 2024)
+                        <br>Worked on front-end development projects, improved user interface design, and helped with website maintenance.
+                    </li>
+                    <li>
+                        <strong>Freelance Web Designer</strong> (2022 - Present)
+                        <br>Created websites for small businesses and personal projects using HTML, CSS, and JavaScript.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Skills -->
+            <div class="resume-section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Responsive Web Design</li>
+                    <li>Version Control (Git/GitHub)</li>
+                    <li>Problem-solving and Debugging</li>
+                    <li>Basic Python Programming</li>
+                </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="resume-section">
+                <h2>Projects</h2>
+                <ul>
+                    <li>
+                        <strong>Interactive Resume</strong> - A dynamic online resume built with HTML, CSS, and JavaScript.
+                    </li>
+                    <li>
+                        <strong>Personal Blog</strong> - A blog website designed to share thoughts and ideas on web development.
+                    </li>
+                    <li>
+                        <strong>JavaScript Game</strong> - A simple game built using JavaScript and HTML5 canvas.
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Muhammad Parwaz. All rights reserved.</p>
+        <p>Connect with me on <a href="https://www.linkedin.com">LinkedIn</a> | <a href="https://github.com">GitHub</a></p>
+    </footer>
+
+    <button id="modeToggle">Toggle Light/Dark Mode</button>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

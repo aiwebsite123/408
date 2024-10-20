@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby - Photography</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script>
+        // Function to set the theme based on user preference
+        function setTheme(theme) {
+            document.body.classList.toggle('dark-mode', theme === 'dark');
+            localStorage.setItem('theme', theme); // Save preference to local storage
+        }
+    
+        // Load theme from local storage or set default
+        function loadTheme() {
+            const theme = localStorage.getItem('theme') || 'light'; // Default to light
+            setTheme(theme);
+        }
+    
+        // Toggle theme when button is clicked
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        }
+    
+        // Load theme on initial page load
+        window.onload = loadTheme;
+    
+        // Add event listener to the toggle button
+        document.getElementById('modeToggle').addEventListener('click', toggleTheme);
+    </script>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="cheatsheet.html">Html Cheat Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="hobby-introduction">
+            <h1>Photography - Capturing Moments</h1>
+            <p>Photography is one of my favorite hobbies. I enjoy capturing beautiful moments, landscapes, and candid shots of people. It allows me to express my creativity and see the world from different perspectives.</p>
+        </section>
+
+        <section id="why-i-love-photography">
+            <h2>Why I Love Photography</h2>
+            <ul>
+                <li>It helps me capture memories and preserve them forever.</li>
+                <li>It allows me to explore and appreciate the beauty in everyday life.</li>
+                <li>Photography is a great way to express creativity and storytelling.</li>
+                <li>It encourages me to travel and discover new places.</li>
+            </ul>
+        </section>
+
+        <section id="my-photography-gear">
+            <h2>My Photography Gear</h2>
+            <p>Here are some of the tools I use for my photography:</p>
+            <ul>
+                <li><strong>Camera:</strong> Canon EOS R6 - a versatile mirrorless camera.</li>
+                <li><strong>Lenses:</strong> 
+                    <ul>
+                        <li>Canon RF 24-70mm f/2.8L IS USM</li>
+                        <li>Canon RF 50mm f/1.2L USM</li>
+                    </ul>
+                </li>
+                <li><strong>Tripod:</strong> Manfrotto Befree Advanced Carbon Fiber Travel Tripod.</li>
+                <li><strong>Editing Software:</strong> Adobe Lightroom and Photoshop.</li>
+            </ul>
+        </section>
+
+        <section id="photo-gallery">
+            <h2>Photo Gallery</h2>
+            <p>Here are some of my favorite shots:</p>
+            <div class="gallery">
+                <img src="images/photo1.jpg" alt="Landscape Photography">
+                <img src="images/photo2.jpg" alt="Portrait Photography">
+                <img src="images/photo3.jpg" alt="Street Photography">
+                <img src="images/photo4.jpg" alt="Nature Photography">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Muhammad Parwaz. All rights reserved.</p>
+    </footer>
+
+    <button id="modeToggle">Toggle Light/Dark Mode</button>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>

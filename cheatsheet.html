@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Cheat Sheet</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script>
+        // Function to set the theme based on user preference
+        function setTheme(theme) {
+            document.body.classList.toggle('dark-mode', theme === 'dark');
+            localStorage.setItem('theme', theme); // Save preference to local storage
+        }
+    
+        // Load theme from local storage or set default
+        function loadTheme() {
+            const theme = localStorage.getItem('theme') || 'light'; // Default to light
+            setTheme(theme);
+        }
+    
+        // Toggle theme when button is clicked
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        }
+    
+        // Load theme on initial page load
+        window.onload = loadTheme;
+    
+        // Add event listener to the toggle button
+        document.getElementById('modeToggle').addEventListener('click', toggleTheme);
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="cheatsheet.html">Html Cheat Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="html-cheatsheet">
+            <h1>HTML Cheat Sheet</h1>
+            <p>This cheat sheet includes some commonly used HTML tags and attributes.</p>
+
+            <h2>Basic Tags</h2>
+            <ul>
+                <li>
+                    <code>&lt;!DOCTYPE html&gt;</code> - Defines the document type.
+                </li>
+                <li>
+                    <code>&lt;html&gt;&lt;/html&gt;</code> - The root element of an HTML page.
+                </li>
+                <li>
+                    <code>&lt;head&gt;&lt;/head&gt;</code> - Contains metadata, links, and title.
+                </li>
+                <li>
+                    <code>&lt;body&gt;&lt;/body&gt;</code> - The content of the HTML page.
+                </li>
+            </ul>
+
+            <h2>Text Formatting Tags</h2>
+            <ul>
+                <li>
+                    <code>&lt;h1&gt; to &lt;h6&gt;</code> - Heading tags from largest (<code>h1</code>) to smallest (<code>h6</code>).
+                </li>
+                <li>
+                    <code>&lt;p&gt;</code> - Defines a paragraph.
+                </li>
+                <li>
+                    <code>&lt;strong&gt;</code> - Makes text bold.
+                </li>
+                <li>
+                    <code>&lt;em&gt;</code> - Italicizes text.
+                </li>
+                <li>
+                    <code>&lt;br&gt;</code> - Inserts a line break.
+                </li>
+                <li>
+                    <code>&lt;hr&gt;</code> - Inserts a horizontal line.
+                </li>
+            </ul>
+
+            <h2>Links and Images</h2>
+            <ul>
+                <li>
+                    <code>&lt;a href="url"&gt;Link Text&lt;/a&gt;</code> - Creates a hyperlink.
+                </li>
+                <li>
+                    <code>&lt;img src="path/to/image" alt="description"&gt;</code> - Displays an image.
+                </li>
+            </ul>
+
+            <h2>Lists</h2>
+            <ul>
+                <li>
+                    <code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code> - Unordered list.
+                </li>
+                <li>
+                    <code>&lt;ol&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ol&gt;</code> - Ordered list.
+                </li>
+            </ul>
+
+            <h2>Tables</h2>
+            <ul>
+                <li>
+                    <code>&lt;table&gt;</code> - Defines a table.
+                </li>
+                <li>
+                    <code>&lt;tr&gt;</code> - Table row.
+                </li>
+                <li>
+                    <code>&lt;th&gt;</code> - Table header.
+                </li>
+                <li>
+                    <code>&lt;td&gt;</code> - Table data.
+                </li>
+            </ul>
+
+            <h2>Forms</h2>
+            <ul>
+                <li>
+                    <code>&lt;form&gt;&lt;/form&gt;</code> - Defines a form.
+                </li>
+                <li>
+                    <code>&lt;input type="text"&gt;</code> - Single-line text input.
+                </li>
+                <li>
+                    <code>&lt;textarea&gt;&lt;/textarea&gt;</code> - Multi-line text input.
+                </li>
+                <li>
+                    <code>&lt;button&gt;Click Me&lt;/button&gt;</code> - Button element.
+                </li>
+            </ul>
+
+            <h2>Media</h2>
+            <ul>
+                <li>
+                    <code>&lt;audio controls&gt;&lt;source src="path/to/audio" type="audio/mpeg"&gt;&lt;/audio&gt;</code> - Embeds audio.
+                </li>
+                <li>
+                    <code>&lt;video controls&gt;&lt;source src="path/to/video" type="video/mp4"&gt;&lt;/video&gt;</code> - Embeds video.
+                </li>
+            </ul>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Muhammad Parwaz. All rights reserved.</p>
+    </footer>
+
+    <button id="modeToggle">Toggle Light/Dark Mode</button>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
