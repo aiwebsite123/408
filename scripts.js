@@ -79,3 +79,13 @@ const navList = document.querySelector('#nav-list');
 menuToggle.addEventListener('click', () => {
     navList.classList.toggle('open');
 });
+
+// JavaScript to toggle the navigation menu
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('open'); // Toggle the 'open' class
+    });
+});
