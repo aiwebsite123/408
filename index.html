@@ -24,6 +24,12 @@
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             setTheme(newTheme);
         }
+
+        // Toggle sidebar visibility
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open'); // Add/remove 'open' class
+        }
     
         // Load theme on initial page load
         window.onload = loadTheme;
@@ -35,6 +41,7 @@
 <body>
     <!-- Header Section with Navigation -->
     <header>
+        <aside id="sidebar">
         <nav>
             <div class="menu-toggle" id="mobile-menu">&#9776;</div>
             <ul>
@@ -45,7 +52,7 @@
             </ul>
           
         </nav>
-      
+       </aside>
     </header>
 
     <!-- Main Content Section -->
